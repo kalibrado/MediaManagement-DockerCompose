@@ -64,3 +64,7 @@ This Docker Compose file simplifies the deployment of various media management t
 - **Customization:** Adjust paths and settings to suit your preferences and system configuration.
 
 This Docker Compose configuration streamlines the deployment of media management tools, making it easy to manage and organize your digital media effortlessly.
+
+![Annotation 2024-01-15 104845](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/20957419-67e4-4339-8ee2-c2f2cea4422a)
+
+
