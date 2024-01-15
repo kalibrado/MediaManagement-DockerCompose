@@ -68,3 +68,10 @@ This Docker Compose configuration streamlines the deployment of media management
 ![Annotation 2024-01-15 104845](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/20957419-67e4-4339-8ee2-c2f2cea4422a)
 
 
+## Sources
+
+https://github.com/FlareSolverr/FlareSolverr
+
+https://wiki.servarr.com/
+
+https://docs.linuxserver.io/
