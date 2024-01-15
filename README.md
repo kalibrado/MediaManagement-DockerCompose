@@ -21,8 +21,8 @@ This Docker Compose file simplifies the deployment of various media management t
 
 1. **Clone the Repository:**
     ```bash
-    git clone [repository_url]
-    cd [repository_directory]
+    git clone https://github.com/kalibrado/MediaManagement-DockerCompose.git
+    cd MediaManagement-DockerCompose/
     ```
 
 2. **Set Environment Variables:**
@@ -43,7 +43,15 @@ This Docker Compose file simplifies the deployment of various media management t
 
 - **Prowlarr:** Visit `http://[HOST]:[PORT_PROWLARR]` for indexer management and integration with other PVR apps.
 
-- **Sonarr, Lidarr, Radarr, Readarr, Lazylibrarian, Mylar3:** Access respective services via `http://[HOST]:[PORT_SONARR]`, `http://[HOST]:[PORT_LIDARR]`, `http://[HOST]:[PORT_RADARR]`, `http://[HOST]:[PORT_READAR]`, `http://[HOST]:[PORT_LAZYLIBRARIAN]`, `http://[HOST]:[PORT_MYLAR3]`.
+- **Sonarr, Lidarr, Radarr, Readarr, Lazylibrarian, Mylar3:**
+
+    Access respective services via
+    - `http://[HOST]:[PORT_SONARR]`
+    - `http://[HOST]:[PORT_LIDARR]`
+    - `http://[HOST]:[PORT_RADARR]`
+    - `http://[HOST]:[PORT_READAR]`
+    - `http://[HOST]:[PORT_LAZYLIBRARIAN]`
+    - `http://[HOST]:[PORT_MYLAR3]`
 
 - **FlareSolverr:** Configure as needed and integrate with other services.
 
