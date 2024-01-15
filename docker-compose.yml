@@ -3,7 +3,7 @@ name: servarr
 services:
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
-    container_name: prowlarr
+    container_name: servarr-prowlarr
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -25,7 +25,7 @@ services:
 
   sonarr:
     image: lscr.io/linuxserver/sonarr
-    container_name: sonarr
+    container_name: servarr-sonarr
     restart: unless-stopped
     depends_on:
       prowlarr:
@@ -45,7 +45,7 @@ services:
 
   lidarr:
     image: lscr.io/linuxserver/lidarr
-    container_name: lidarr
+    container_name: servarr-lidarr
     restart: unless-stopped
     depends_on:
       prowlarr:
@@ -65,7 +65,7 @@ services:
 
   radarr:
     image: lscr.io/linuxserver/radarr
-    container_name: radarr
+    container_name: servarr-radarr
     restart: unless-stopped
     depends_on:
       prowlarr:
@@ -85,7 +85,7 @@ services:
 
   readarr:
     image: lscr.io/linuxserver/readarr:nightly
-    container_name: readarr
+    container_name: servarr-readarr
     restart: unless-stopped
     depends_on:
       prowlarr:
@@ -105,7 +105,7 @@ services:
   
   lazylibrarian:
     image: lscr.io/linuxserver/lazylibrarian:latest
-    container_name: lazylibrarian
+    container_name: servarr-lazylibrarian
     restart: unless-stopped
     depends_on:
       prowlarr:
@@ -125,7 +125,7 @@ services:
 
   mylar3:
     image: lscr.io/linuxserver/mylar3:latest
-    container_name: mylar3
+    container_name: servarr-mylar3
     restart: unless-stopped
     depends_on:
       prowlarr:
@@ -145,7 +145,7 @@ services:
 
   flaresolverr:
     image: ghcr.io/flaresolverr/flaresolverr
-    container_name: flaresolverr
+    container_name: servarr-flaresolverr
     restart: unless-stopped
     depends_on:
       prowlarr:
