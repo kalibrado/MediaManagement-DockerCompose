@@ -1,0 +1,157 @@
+version: "4"
+name: servarr
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:prowlarr
+    volumes:
+      - ${PATH_CONFIG}/prowlarr/config:/config
+    ports:
+      - ${HOST}:${PORT_PROWLARR}:9696
+      - ${HOST}:${PORT_SONARR}:8989
+      - ${HOST}:${PORT_LIDARR}:8686
+      - ${HOST}:${PORT_RADARR}:7878
+      - ${HOST}:${PORT_READAR}:8787
+      - ${HOST}:${PORT_LAZYLIBRARIAN}:5299
+      - ${HOST}:${PORT_MYLAR3}:8090
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr
+    container_name: sonarr
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - PUID=${PUID}0
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:sonarr
+    volumes:
+      - ${PATH_CONFIG}/sonarr/config:/config
+      - ${PATH_DOWNLOADS}:/downloads
+      - ${PATH_DATA}:/mnt
+
+  lidarr:
+    image: lscr.io/linuxserver/lidarr
+    container_name: lidarr
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:lidarr
+    volumes:
+      - ${PATH_CONFIG}/lidarr/config:/config
+      - ${PATH_DOWNLOADS}:/downloads
+      - ${PATH_DATA}:/mnt
+
+  radarr:
+    image: lscr.io/linuxserver/radarr
+    container_name: radarr
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:radarr
+    volumes:
+      - ${PATH_CONFIG}/radarr/config:/config
+      - ${PATH_DOWNLOADS}:/downloads
+      - ${PATH_DATA}:/mnt
+
+  readarr:
+    image: lscr.io/linuxserver/readarr:nightly
+    container_name: readarr
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:readarr
+    volumes:
+      - ${PATH_CONFIG}/readarr/config:/config
+      - ${PATH_DATA}/Livres:/books 
+      - ${PATH_DOWNLOADS}:/downloads
+  
+  lazylibrarian:
+    image: lscr.io/linuxserver/lazylibrarian:latest
+    container_name: lazylibrarian
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:lazylibrarian|linuxserver/mods:universal-calibre|linuxserver/mods:lazylibrarian-ffmpeg
+    volumes:
+      - ${PATH_CONFIG}/lazylibrarian/config:/config
+      - ${PATH_DATA}/Livres:/books 
+      - ${PATH_DOWNLOADS}:/downloads
+
+  mylar3:
+    image: lscr.io/linuxserver/mylar3:latest
+    container_name: mylar3
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:mylar3
+    volumes:
+      - ${PATH_CONFIG}/mylar3/config:/config
+      - ${PATH_DATA}/Comics:/comics 
+      - ${PATH_DOWNLOADS}:/downloads
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr
+    container_name: flaresolverr
+    restart: unless-stopped
+    depends_on:
+      prowlarr:
+        condition: service_started
+        restart: true
+        required: true
+    network_mode: service:prowlarr
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL}
