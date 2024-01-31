@@ -60,8 +60,12 @@ This Docker Compose file simplifies the deployment of various media management t
 
 ## Portainer 
 
-![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/1065cd7c-4b97-40d3-8521-d52e40037e14)
-![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/14ee132a-0ab2-4579-8cfd-66bca4add764)
+- Create new stack 
+![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/d85e39d3-6f5b-4d0e-b420-57f4bd5fa695)
+- Paste docker composer file content
+  ![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/62dec701-a50f-4a72-9d69-4a4359be086a)
+
+
 
 
 ## Additional Notes
