@@ -58,6 +58,14 @@ This Docker Compose file simplifies the deployment of various media management t
 
 - **FlareSolverr:** Configure as needed and integrate with other services.
 
+## Portainer 
+
+![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/065e2a9a-5688-4290-b6e3-64c6ce37927f)
+
+![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/9301a9aa-79fd-467e-8116-ffb14b527e12)
+
+![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/2255800a-e40b-4a6c-a1bc-e75cef83b600)
+
 ## Additional Notes
 
 - **Dependencies:** Services are interconnected, and dependencies are managed automatically.
@@ -69,15 +77,6 @@ This Docker Compose file simplifies the deployment of various media management t
 This Docker Compose configuration streamlines the deployment of media management tools, making it easy to manage and organize your digital media effortlessly.
 
 ![Annotation 2024-01-15 104845](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/20957419-67e4-4339-8ee2-c2f2cea4422a)
-
-
-## Portainer 
-
-![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/065e2a9a-5688-4290-b6e3-64c6ce37927f)
-
-![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/9301a9aa-79fd-467e-8116-ffb14b527e12)
-
-![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/2255800a-e40b-4a6c-a1bc-e75cef83b600)
 
 ## Sources
 
