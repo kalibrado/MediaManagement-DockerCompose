@@ -58,13 +58,19 @@ This Docker Compose file simplifies the deployment of various media management t
 
 - **FlareSolverr:** Configure as needed and integrate with other services.
 
-## Portainer 
+## Or use portainer 
 
 - Create new stack 
-![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/d85e39d3-6f5b-4d0e-b420-57f4bd5fa695)
+  ![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/d85e39d3-6f5b-4d0e-b420-57f4bd5fa695)
 - Paste docker composer file content
   ![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/62dec701-a50f-4a72-9d69-4a4359be086a)
-
+- Edit and paste .env file 
+  ![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/e6bc5ef7-e755-4ab6-8b8c-0469548e1870)
+- Deploy stack 
+  ![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/6b49602a-a82c-4c87-8f6c-c36d21466e21)
+- Enjoy!!
+  ![image](https://github.com/kalibrado/MediaManagement-DockerCompose/assets/51781584/da294ef1-2ec2-48d8-8f74-e0092588a16f)
+ 
 
 
 
