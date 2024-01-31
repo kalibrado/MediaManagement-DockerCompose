@@ -27,7 +27,7 @@ This Docker Compose file simplifies the deployment of various media management t
     ```
 
 2. **Set Environment Variables:**
-    - Define environment variables in a `.env` file (create if not present) for PUID, PGID, TZ, DOCKER_MODS, HOST, PORTS, PATH_CONFIG, PATH_DOWNLOADS, and PATH_DATA.
+    - Adjust environment variables in a `.env` file for PUID, PGID, TZ, DOCKER_MODS, HOST, PORTS, PATH_CONFIG, PATH_DOWNLOADS, and PATH_DATA.
 
 3. **Configure Services:**
     - Adjust configuration settings for each service in the `docker-compose.yml` file.
