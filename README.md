@@ -73,3 +73,5 @@ https://github.com/FlareSolverr/FlareSolverr
 https://wiki.servarr.com/
 
 https://docs.linuxserver.io/
+
+https://docs.theme-park.dev/themes
