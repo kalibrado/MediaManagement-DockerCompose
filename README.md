@@ -2,8 +2,6 @@
 Docker Compose Suite for Media Management: Streamline the deployment and automation of your media management tools, including Prowlarr, Sonarr, Lidarr, Radarr, Readarr, Lazylibrarian, Mylar3, and FlareSolverr. Effortlessly organize and access your digital content with this comprehensive configuration.
 
 
-
-
 ## Overview
 
 This Docker Compose file simplifies the deployment of various media management tools, providing a comprehensive solution for organizing and automating your digital content. It includes the following services:
