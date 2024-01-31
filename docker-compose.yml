@@ -146,3 +146,14 @@ services:
       - ${HOST}:${PORT_JELLYFIN}:8096
 
   jellyseerr:
+    image: fallenbagel/jellyseerr
+    container_name: jellyseerr
+    restart: unless-stopped
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL}
+      - TZ=${TZ}
+      - DOCKER_MODS=${DOCKER_MODS}:sonarr
+    volumes:
+      - ${PATH_CONFIG}/jellyseerr/:/app/config
+    ports:
+      - ${HOST}:${PORT_JELLYSEERR}:5055
