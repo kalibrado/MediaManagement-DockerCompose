@@ -99,3 +99,5 @@ https://docs.theme-park.dev/themes
 https://github.com/Fallenbagel/jellyseerr
 
 https://jellyfin.org/docs/
+
+[!["Buy Me A Beer"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/leonardofod)
